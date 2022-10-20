@@ -57,7 +57,7 @@
                             </label>
                             <!-- 회원가입, ID/PW찾기 -->
                             <article id="signUp-find-area">
-                                <a href="#">회원가입</a>
+                                <a href="/member/signUp">회원가입</a>
                                 <span>|</span>
                                 <a href="#">ID/PW 찾기</a>
                             </article>
@@ -73,7 +73,7 @@
                             <!-- 회원 정보 + 로그아웃 -->
                             <div class="my-info">
                                 <div>
-                                    <a href="#" id="nickname">${loginMember.memberNickname}</a>
+                                    <a href="/member/myPage/info" id="nickname">${loginMember.memberNickname}</a>
                                     <a href="/member/logout" id="logout-btn">로그아웃</a>
                                 </div>
                                 
