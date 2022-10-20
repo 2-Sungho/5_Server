@@ -255,3 +255,12 @@ WHERE MEMBER_DEL_FL ='N'
 AND MEMBER_EMAIL = 'user01@kh.or.kr'
 AND MEMBER_PW = 'pass01!';
 
+-- 회원 정보 수정
+UPDATE "MEMBER" SET
+MEMBER_NICKNAME= ?,
+MEMBER_TEL = ?,
+MEMBER_ADDRESS = ?
+WHERE MEMBER_NO = ?
+--> 로그인한 회원의 번호
+
+

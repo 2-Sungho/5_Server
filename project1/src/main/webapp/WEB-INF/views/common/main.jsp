@@ -83,8 +83,6 @@
                     </c:otherwise>
                 </c:choose>
 
-
-                
             </section>
         </section>
     </main>

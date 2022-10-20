@@ -72,4 +72,22 @@ public class MemberDAO {
 		}
 		return result;
 	}
+
+	public int updateMember(Connection conn, Member member) throws Exception {
+		int result=0;
+		try {
+			String sql=prop.getProperty("updateMember");
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, member.getMemberNickname());
+			pstmt.setString(2, member.getMemberTel());
+			pstmt.setString(3, member.getMemberAddress());
+			pstmt.setInt(4, member.getMemberNo());
+			
+			result=pstmt.executeUpdate();
+		} finally {
+			close(pstmt);
+		}
+		
+		return result;
+	}
 }
