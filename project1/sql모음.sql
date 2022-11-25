@@ -564,7 +564,21 @@ BOARD_CONTENT = #{boardContent}
 WHERE BOARD_NO = #{boardNo}
 
 
+-- 검색 조건이 일치하는 게시글 수 조회
+SELECT COUNT(*) 
+FROM BOARD
+JOIN "MEMBER" USING(MEMBER_NO)
+WHERE BOARD_CODE =#{boardCode}
+AND BOARD_DEL_FL = 'N'
+-- 제목검색
+-- AND BOARD_TITLE LIKE '%10%'
+-- 내용 검색
+-- AND BOARD_CONTENT LIKE '%10%'
+-- 제목 내용 검색
+-- AND (BOARD_TITLE LIKE '%10%' OR BOARD_CONTENT LIKE '%10%')
+AND MEMBER_NICKNAME LIKE '%유저%'
 
+SELECT * FROM "COMMENT";
 
 
 
